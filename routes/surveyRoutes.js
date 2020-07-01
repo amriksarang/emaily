@@ -100,7 +100,7 @@ module.exports = app => {
 			title,
 			subject,
 			body,
-			recipients: recipients.split(',').map( email => ({ email: email.trim(), responded: false }) ), // {email} is wrapped in () to avoid the confusion that the curly braces are not the start and end of function. Rather they signal the start and end of the json object 
+			recipients: recipients.split(',').map( email => ({ email: email.trim() }) ), // {email} is wrapped in () to avoid the confusion that the curly braces are not the start and end of function. Rather they signal the start and end of the json object 
 			_user: req.user.id,
 			dateSent: Date.now()
 		});
